@@ -5,7 +5,8 @@ export class Home extends React.Component {
   constructor(props) {
     super();
     this.state = {
-      age: props.initialeAge
+      age: props.initialeAge,
+      status: 0
     };
   }
 
@@ -23,7 +24,8 @@ export class Home extends React.Component {
     return (
       <div>
         <p>In a new component!</p>
-        <p>Your name is {this.props.name} and your age is {this.state.age}</p>     
+        <p>Your name is {this.props.name} and your age is {this.state.age}</p>  
+        <p>Status is {this.state.status}</p>   
         <hr/>
         {/* <button onClick={this.onMakeOlder.bind(this)} className="btn btn-primary">Make me older!</button>    */}
         <button onClick={() => this.onMakeOlder()} className="btn btn-primary">Make me older!</button>
